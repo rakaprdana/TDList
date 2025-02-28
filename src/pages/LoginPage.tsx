@@ -36,9 +36,10 @@ const LoginPage = () => {
               </label>
               <div className="mt-2">
                 <Input
-                  id={"username"}
-                  name={"username"}
-                  type={"username"}
+                  id="username"
+                  name="username"
+                  type="text"
+                  autoComplete="username"
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
@@ -52,9 +53,10 @@ const LoginPage = () => {
               </label>
               <div className="mt-2">
                 <Input
-                  id={"password"}
-                  name={"password"}
-                  type={"password"}
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
