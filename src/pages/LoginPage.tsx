@@ -22,7 +22,7 @@ const LoginPage = () => {
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+        <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-grayText">
           Sign in to TDList
         </h2>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -30,7 +30,7 @@ const LoginPage = () => {
             <div>
               <label
                 htmlFor="username"
-                className="block text-sm/6 font-medium text-gray-900"
+                className="block text-sm/6 font-medium text-grayText"
               >
                 Username
               </label>
@@ -47,7 +47,7 @@ const LoginPage = () => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm/6 font-medium text-gray-900"
+                className="block text-sm/6 font-medium text-grayText"
               >
                 Password
               </label>
