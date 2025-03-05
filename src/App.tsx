@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ProtectedRoute } from "./middlewares/protectedroute";
+import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
-import { ProtectedRoute } from "./components/middlewares/protectedRoute";
-import Dashboard from "./pages/Dashboard";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
         </Route>
       </Routes>
     </Router>

@@ -7,7 +7,7 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
-const AUTH_CREDENTIALS = { username: "raka", password: "123" };
+const AUTH_CREDENTIALS = { username: "user", password: "123" };
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
