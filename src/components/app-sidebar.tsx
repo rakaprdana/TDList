@@ -21,11 +21,11 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Installation",
+          title: "Dashboard",
           url: "#",
         },
         {
-          title: "Project Structure",
+          title: "My All List",
           url: "#",
         },
       ],
@@ -37,9 +37,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <div>
-          <h1>To Do List</h1>
-          <p>Hello {localStorage.getItem("user")}</p>
+        <div className="">
+          <h1 className="text-4xl font-bold">To Do List</h1>
+          <p className="ml-2">Hello {localStorage.getItem("user")}</p>
         </div>
       </SidebarHeader>
       <SidebarContent>
@@ -50,8 +50,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarGroupContent>
               <SidebarMenu>
                 {item.items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={item.isActive}>
+                  <SidebarMenuItem
+                    key={item.title}
+                    className="bg-primary-foreground rounded-lg text-white "
+                  >
+                    <SidebarMenuButton asChild>
                       <a href={item.url}>{item.title}</a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
